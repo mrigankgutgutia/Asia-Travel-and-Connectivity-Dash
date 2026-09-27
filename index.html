@@ -8,10 +8,10 @@
  const ds=new DecompressionStream('gzip');
  let html=await new Response(new Blob([bin]).stream().pipeThrough(ds)).text();
  const patch=`(function(){
-  function apply(){
+  function patchConnectivity(){
    const f=document.querySelector('iframe[title="Asia Connectivity Tracker"]');
-   if(!f||!f.contentDocument||!f.contentDocument.body){setTimeout(apply,120);return;}
-   const d=f.contentDocument;
+   if(!f||!f.contentDocument||!f.contentDocument.body){setTimeout(patchConnectivity,120);return;}
+   const d=f.contentDocument; if(d.documentElement.dataset.livePatched==='1') return; d.documentElement.dataset.livePatched='1';
    const s=d.createElement('script');
    s.textContent=\`
     try{
@@ -47,7 +47,43 @@
    \`;
    d.body.appendChild(s);
   }
-  setTimeout(apply,80);
+  function patchTravel(){
+   const f=document.querySelector('iframe[title="Travel Footprint Dashboard"]');
+   if(!f||!f.contentDocument||!f.contentDocument.body){setTimeout(patchTravel,120);return;}
+   const d=f.contentDocument; if(d.documentElement.dataset.travelPatched==='1') return; d.documentElement.dataset.travelPatched='1';
+   const s=d.createElement('script');
+   s.textContent=\`
+    try{
+      const qEl=document.getElementById('q'), regionEl=document.getElementById('region'), countryEl=document.getElementById('country');
+      function refreshCountries(){
+        const region=regionEl.value;
+        const valid=[...new Set(data.filter(x=>!region||x.r===region).map(x=>x.c))].sort();
+        const prior=countryEl.value;
+        countryEl.innerHTML='<option value="">All countries</option>'+valid.map(v=>'<option value="'+v+'">'+v+'</option>').join('');
+        countryEl.value=valid.includes(prior)?prior:'';
+      }
+      render=function(){
+        layer.clearLayers();
+        const q=qEl.value.trim().toLowerCase();
+        const fdata=data.filter(x=>(!q||JSON.stringify(x).toLowerCase().includes(q))&&(!regionEl.value||x.r===regionEl.value)&&(!countryEl.value||x.c===countryEl.value));
+        fdata.forEach(x=>{const radius=5+Math.min(10,x.v*1.2);L.circleMarker([x.lat,x.lon],{radius,weight:1.5,fillOpacity:.75}).bindTooltip(\`\${x.p} · \${x.y} · ~\${x.v}×\`,{direction:'top'}).bindPopup(popup(x)).addTo(layer);});
+        if(fdata.length){const bounds=L.latLngBounds(fdata.map(x=>[x.lat,x.lon]));map.fitBounds(bounds.pad(.18),{maxZoom:5});}else{map.fitBounds([[0,-12],[72,150]]);}
+        const countries=new Set(fdata.map(x=>x.c));
+        const visits=fdata.reduce((s,x)=>s+x.v,0);
+        const asia=fdata.filter(x=>x.r!=='Europe').length, eur=fdata.filter(x=>x.r==='Europe').length;
+        document.getElementById('stats').innerHTML=\`<div class="card"><b>\${countries.size}</b><span>Countries / territories</span></div><div class="card"><b>\${fdata.length}</b><span>Mapped places / clusters</span></div><div class="card"><b>\${visits}</b><span>Approx. visit instances</span></div><div class="card"><b>\${asia}</b><span>Asian place records</span></div><div class="card"><b>\${eur}</b><span>European place records</span></div>\`;
+        const repeat=[...fdata].sort((a,b)=>b.v-a.v).slice(0,10), mx=repeat.length?repeat[0].v:1;
+        document.getElementById('bars').innerHTML=repeat.length?repeat.map(x=>\`<div><b>\${x.p} <span class="muted">~\${x.v}×</span></b><div class="bar"><i style="width:\${x.v/mx*100}%"></i></div></div>\`).join(''):'<span class="muted">No places match the current filters.</span>';
+      };
+      regionEl.addEventListener('change',()=>{refreshCountries();render();});
+      countryEl.addEventListener('change',render);
+      qEl.addEventListener('input',render);
+      refreshCountries(); render();
+    }catch(e){console.error(e);}
+   \`;
+   d.body.appendChild(s);
+  }
+  setTimeout(patchConnectivity,80); setTimeout(patchTravel,100);
  })();`;
  html=html.replace('</body>','<script>'+patch+'<\\/script></body>');
  document.open();document.write(html);document.close();
