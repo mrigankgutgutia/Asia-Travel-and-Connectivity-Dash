@@ -1,182 +1,282 @@
 [
   {
-    "date":"2026-07-02",
-    "name":"Muscat–Singapore",
-    "operator":"Oman Air",
-    "mode":"Flight",
-    "countries":["Oman","Singapore"],
-    "corridor":"West Asia–SEA",
-    "status":"Operational",
-    "scale":"4× weekly",
-    "why":"Restores a direct Oman–Singapore link and strengthens Gulf–Southeast Asia connectivity.",
-    "source":"Oman Air: launched 2 Jul 2026; Thu/Fri/Sat/Sun"
+    "date": "2026-07-02",
+    "name": "Muscat–Singapore",
+    "operator": "Oman Air",
+    "mode": "Flight",
+    "countries": [
+      "Oman",
+      "Singapore"
+    ],
+    "corridor": "West Asia–SEA",
+    "status": "Operational",
+    "scale": "4× weekly",
+    "why": "Restores a direct Oman–Singapore link and strengthens Gulf–Southeast Asia connectivity.",
+    "source": "Oman Air: launched 2 Jul 2026; Thu/Fri/Sat/Sun"
   },
   {
-    "date":"2026-07-30",
-    "name":"Riyadh–Kuala Lumpur",
-    "operator":"Riyadh Air",
-    "mode":"Flight",
-    "countries":["Saudi Arabia","Malaysia"],
-    "corridor":"West Asia–SEA",
-    "status":"Operational",
-    "scale":"3× weekly · B787-9",
-    "why":"Adds Saudi Arabia’s new flag carrier into the Gulf–Malaysia corridor.",
-    "source":"Launched 30 Jul 2026"
+    "date": "2026-07-30",
+    "name": "Riyadh–Kuala Lumpur",
+    "operator": "Riyadh Air",
+    "mode": "Flight",
+    "countries": [
+      "Saudi Arabia",
+      "Malaysia"
+    ],
+    "corridor": "West Asia–SEA",
+    "status": "Operational",
+    "scale": "3× weekly · B787-9",
+    "why": "Adds Saudi Arabia’s new flag carrier into the Gulf–Malaysia corridor.",
+    "source": "Launched 30 Jul 2026"
   },
   {
-    "date":"2026-08-04",
-    "name":"Riyadh–Mumbai",
-    "operator":"Riyadh Air",
-    "mode":"Flight",
-    "countries":["Saudi Arabia","India"],
-    "corridor":"West Asia–India",
-    "status":"Operational",
-    "scale":"Daily · B787-9",
-    "why":"Riyadh Air’s first India route adds premium capacity on a major India–GCC business corridor.",
-    "source":"Launched 4 Aug 2026"
+    "date": "2026-08-04",
+    "name": "Riyadh–Mumbai",
+    "operator": "Riyadh Air",
+    "mode": "Flight",
+    "countries": [
+      "Saudi Arabia",
+      "India"
+    ],
+    "corridor": "West Asia–India",
+    "status": "Operational",
+    "scale": "Daily · B787-9",
+    "why": "Riyadh Air’s first India route adds premium capacity on a major India–GCC business corridor.",
+    "source": "Launched 4 Aug 2026"
   },
   {
-    "date":"2026-08-09",
-    "name":"Abu Dhabi–Tashkent",
-    "operator":"Etihad Airways",
-    "mode":"Flight",
-    "countries":["United Arab Emirates","Uzbekistan"],
-    "corridor":"West Asia–Central Asia",
-    "status":"Operational",
-    "scale":"Daily · A320",
-    "why":"Creates a daily UAE–Uzbekistan link and a new Etihad gateway into Central Asia.",
-    "source":"Etihad: launched 9 Aug 2026; daily"
+    "date": "2026-08-09",
+    "name": "Abu Dhabi–Tashkent",
+    "operator": "Etihad Airways",
+    "mode": "Flight",
+    "countries": [
+      "United Arab Emirates",
+      "Uzbekistan"
+    ],
+    "corridor": "West Asia–Central Asia",
+    "status": "Operational",
+    "scale": "Daily · A320",
+    "why": "Creates a daily UAE–Uzbekistan link and a new Etihad gateway into Central Asia.",
+    "source": "Etihad: launched 9 Aug 2026; daily"
   },
   {
-    "date":"2026-08-26",
-    "name":"Changchun Metro Line 7",
-    "operator":"Changchun Rail Transit",
-    "mode":"Metro / suburban rail",
-    "countries":["China"],
-    "corridor":"China domestic",
-    "status":"Operational",
-    "scale":"23.16 km",
-    "why":"Adds a major orbital/cross-city corridor and expands Changchun’s metro network.",
-    "source":"Opened 26 Aug 2026"
+    "date": "2026-08-26",
+    "name": "Changchun Metro Line 7",
+    "operator": "Changchun Rail Transit",
+    "mode": "Metro / suburban rail",
+    "countries": [
+      "China"
+    ],
+    "corridor": "China domestic",
+    "status": "Operational",
+    "scale": "23.16 km",
+    "why": "Adds a major orbital/cross-city corridor and expands Changchun’s metro network.",
+    "source": "Opened 26 Aug 2026"
   },
   {
-    "date":"2026-09-02",
-    "name":"Riyadh–Bangkok",
-    "operator":"Riyadh Air",
-    "mode":"Flight",
-    "countries":["Saudi Arabia","Thailand"],
-    "corridor":"West Asia–SEA",
-    "status":"Operational",
-    "scale":"4× weekly · B787-9",
-    "why":"Strengthens the fast-growing Saudi–Thailand tourism and business corridor.",
-    "source":"Launched 2 Sep 2026"
+    "date": "2026-09-02",
+    "name": "Riyadh–Bangkok",
+    "operator": "Riyadh Air",
+    "mode": "Flight",
+    "countries": [
+      "Saudi Arabia",
+      "Thailand"
+    ],
+    "corridor": "West Asia–SEA",
+    "status": "Operational",
+    "scale": "4× weekly · B787-9",
+    "why": "Strengthens the fast-growing Saudi–Thailand tourism and business corridor.",
+    "source": "Launched 2 Sep 2026"
   },
   {
-    "date":"2026-09-02",
-    "name":"Shanghai Pudong–Manila",
-    "operator":"Juneyao Airlines",
-    "mode":"Flight",
-    "countries":["China","Philippines"],
-    "corridor":"China–SEA",
-    "status":"Operational",
-    "scale":"2× weekly · A320neo; 5× weekly from 17 Oct",
-    "why":"Adds a new Chinese carrier on one of the key China–Philippines trunk markets.",
-    "source":"Launched 2 Sep 2026; frequency rises 17 Oct"
+    "date": "2026-09-02",
+    "name": "Shanghai Pudong–Manila",
+    "operator": "Juneyao Airlines",
+    "mode": "Flight",
+    "countries": [
+      "China",
+      "Philippines"
+    ],
+    "corridor": "China–SEA",
+    "status": "Operational",
+    "scale": "2× weekly · A320neo; 5× weekly from 17 Oct",
+    "why": "Adds a new Chinese carrier on one of the key China–Philippines trunk markets.",
+    "source": "Launched 2 Sep 2026; frequency rises 17 Oct"
   },
   {
-    "date":"2026-09-04",
-    "name":"Mumbai–Hanoi",
-    "operator":"Akasa Air",
-    "mode":"Flight",
-    "countries":["India","Vietnam"],
-    "corridor":"India–SEA",
-    "status":"Operational",
-    "scale":"4× weekly · B737-8",
-    "why":"Akasa’s Vietnam entry adds a fourth nonstop operator pattern on Mumbai–Hanoi ahead of IndiGo’s planned daily service.",
-    "source":"Akasa/AeroRoutes: launched 4 Sep 2026"
+    "date": "2026-09-04",
+    "name": "Mumbai–Hanoi",
+    "operator": "Akasa Air",
+    "mode": "Flight",
+    "countries": [
+      "India",
+      "Vietnam"
+    ],
+    "corridor": "India–SEA",
+    "status": "Operational",
+    "scale": "4× weekly · B737-8",
+    "why": "Akasa’s Vietnam entry adds a fourth nonstop operator pattern on Mumbai–Hanoi ahead of IndiGo’s planned daily service.",
+    "source": "Akasa/AeroRoutes: launched 4 Sep 2026"
   },
   {
-    "date":"2026-09-04",
-    "name":"Changsha Metro Line 2 Phase 2",
-    "operator":"Changsha Metro",
-    "mode":"Metro / suburban rail",
-    "countries":["China"],
-    "corridor":"China domestic",
-    "status":"Operational",
-    "scale":"11.06 km · 10 stations",
-    "why":"Extends Line 2 northwest and expands Changsha’s rapid-transit reach toward the future HSR interchange.",
-    "source":"Opened 4 Sep 2026"
+    "date": "2026-09-04",
+    "name": "Changsha Metro Line 2 Phase 2",
+    "operator": "Changsha Metro",
+    "mode": "Metro / suburban rail",
+    "countries": [
+      "China"
+    ],
+    "corridor": "China domestic",
+    "status": "Operational",
+    "scale": "11.06 km · 10 stations",
+    "why": "Extends Line 2 northwest and expands Changsha’s rapid-transit reach toward the future HSR interchange.",
+    "source": "Opened 4 Sep 2026"
   },
   {
-    "date":"2026-09-06",
-    "name":"Indore Metro Priority Corridor–2",
-    "operator":"Madhya Pradesh Metro Rail Corporation",
-    "mode":"Metro / suburban rail",
-    "countries":["India"],
-    "corridor":"India domestic",
-    "status":"Operational",
-    "scale":"11 km · 11 stations; network now ~17 km / 16 stations",
-    "why":"Moves Indore Metro beyond its initial demonstration section into major residential and commercial districts.",
-    "source":"PIB: inaugurated 5 Sep; passenger service from 6 Sep 2026"
+    "date": "2026-09-06",
+    "name": "Indore Metro Priority Corridor–2",
+    "operator": "Madhya Pradesh Metro Rail Corporation",
+    "mode": "Metro / suburban rail",
+    "countries": [
+      "India"
+    ],
+    "corridor": "India domestic",
+    "status": "Operational",
+    "scale": "11 km · 11 stations; network now ~17 km / 16 stations",
+    "why": "Moves Indore Metro beyond its initial demonstration section into major residential and commercial districts.",
+    "source": "PIB: inaugurated 5 Sep; passenger service from 6 Sep 2026"
   },
   {
-    "date":"2026-09-09",
-    "name":"Riyadh–Manila",
-    "operator":"Riyadh Air",
-    "mode":"Flight",
-    "countries":["Saudi Arabia","Philippines"],
-    "corridor":"West Asia–SEA",
-    "status":"Operational",
-    "scale":"Daily · B787-9",
-    "why":"Adds substantial new Gulf–Philippines capacity serving VFR, labour and business traffic.",
-    "source":"Riyadh Air: launched 9 Sep 2026; daily"
+    "date": "2026-09-09",
+    "name": "Riyadh–Manila",
+    "operator": "Riyadh Air",
+    "mode": "Flight",
+    "countries": [
+      "Saudi Arabia",
+      "Philippines"
+    ],
+    "corridor": "West Asia–SEA",
+    "status": "Operational",
+    "scale": "Daily · B787-9",
+    "why": "Adds substantial new Gulf–Philippines capacity serving VFR, labour and business traffic.",
+    "source": "Riyadh Air: launched 9 Sep 2026; daily"
   },
   {
-    "date":"2026-09-16",
-    "name":"Jakarta LRT Kelapa Gading–Manggarai",
-    "operator":"LRT Jakarta / Jakpro",
-    "mode":"Metro / suburban rail",
-    "countries":["Indonesia"],
-    "corridor":"SEA domestic",
-    "status":"Operational",
-    "scale":"12.2 km route · 11 stations · ~28 min end-to-end",
-    "why":"Connects North/East Jakarta directly into Manggarai’s major multimodal rail hub.",
-    "source":"LRT Jakarta: opened 16 Sep 2026"
+    "date": "2026-09-16",
+    "name": "Jakarta LRT Kelapa Gading–Manggarai",
+    "operator": "LRT Jakarta / Jakpro",
+    "mode": "Metro / suburban rail",
+    "countries": [
+      "Indonesia"
+    ],
+    "corridor": "SEA domestic",
+    "status": "Operational",
+    "scale": "12.2 km route · 11 stations · ~28 min end-to-end",
+    "why": "Connects North/East Jakarta directly into Manggarai’s major multimodal rail hub.",
+    "source": "LRT Jakarta: opened 16 Sep 2026"
   },
   {
-    "date":"2026-09-16",
-    "name":"Xiamen Metro Lines 4 & 6 public trial",
-    "operator":"Xiamen Metro",
-    "mode":"Metro / suburban rail",
-    "countries":["China"],
-    "corridor":"China domestic",
-    "status":"Public trial / pre-opening",
-    "scale":"Line 4 ~45 km; Line 6 trial section 28.3 km",
-    "why":"Major expansion of Xiamen’s orbital/cross-bay network; Line 6 is Fujian’s first cross-city metro link into Zhangzhou.",
-    "source":"Public trial began 16 Sep 2026; not yet treated as formal revenue opening"
+    "date": "2026-09-16",
+    "name": "Xiamen Metro Lines 4 & 6 public trial",
+    "operator": "Xiamen Metro",
+    "mode": "Metro / suburban rail",
+    "countries": [
+      "China"
+    ],
+    "corridor": "China domestic",
+    "status": "Public trial / pre-opening",
+    "scale": "Line 4 ~45 km; Line 6 trial section 28.3 km",
+    "why": "Major expansion of Xiamen’s orbital/cross-bay network; Line 6 is Fujian’s first cross-city metro link into Zhangzhou.",
+    "source": "Public trial began 16 Sep 2026; not yet treated as formal revenue opening"
   },
   {
-    "date":"2026-09-28",
-    "name":"Kathmandu–Shanghai",
-    "operator":"Himalaya Airlines",
-    "mode":"Flight",
-    "countries":["Nepal","China"],
-    "corridor":"South Asia–China",
-    "status":"Announced",
-    "scale":"Direct scheduled service · frequency not stated in launch release",
-    "why":"Reopens a direct Nepal–Shanghai corridor; Himalaya says it will be the only scheduled nonstop carrier on the route.",
-    "source":"Himalaya Airlines: service resumes 28 Sep 2026"
+    "date": "2026-09-28",
+    "name": "Kathmandu–Shanghai",
+    "operator": "Himalaya Airlines",
+    "mode": "Flight",
+    "countries": [
+      "Nepal",
+      "China"
+    ],
+    "corridor": "South Asia–China",
+    "status": "Announced",
+    "scale": "Direct scheduled service · frequency not stated in launch release",
+    "why": "Reopens a direct Nepal–Shanghai corridor; Himalaya says it will be the only scheduled nonstop carrier on the route.",
+    "source": "Himalaya Airlines: service resumes 28 Sep 2026"
   },
   {
-    "date":"2026-11-11",
-    "name":"Istanbul–Chengdu Tianfu",
-    "operator":"Turkish Airlines",
-    "mode":"Flight",
-    "countries":["Türkiye","China"],
-    "corridor":"West Asia–China",
-    "status":"Announced",
-    "scale":"3× weekly · B787-9; inaugural flight scheduled B777-300ER",
-    "why":"Adds Turkish Airlines’ first western-interior China gateway and strengthens China–West Asia/Europe transfer options.",
-    "source":"Starts 11 Nov 2026; 3× weekly"
+    "date": "2026-10-03",
+    "name": "Riyadh–Mumbai",
+    "operator": "flyadeal",
+    "mode": "Flight",
+    "countries": [
+      "Saudi Arabia",
+      "India"
+    ],
+    "corridor": "West Asia–India",
+    "status": "Operational",
+    "scale": "5× weekly · A320neo",
+    "why": "Adds low-cost Saudi capacity on a major India–GCC business, VFR and labour corridor.",
+    "source": "Launched 3 Oct 2026; 5× weekly"
+  },
+  {
+    "date": "2026-10-03",
+    "name": "Bali (Denpasar)–Phuket",
+    "operator": "TransNusa",
+    "mode": "Flight",
+    "countries": [
+      "Indonesia",
+      "Thailand"
+    ],
+    "corridor": "SEA–SEA",
+    "status": "Operational",
+    "scale": "Daily · A320 (174 seats); increased from 4× weekly",
+    "why": "The move to daily service materially improves direct connectivity between two major Southeast Asian leisure hubs without a Jakarta/Kuala Lumpur/Singapore connection.",
+    "source": "Route launched 9 Sep 2026; increased 4× weekly → daily from 3 Oct 2026"
+  },
+  {
+    "date": "2026-10-27",
+    "name": "Thiruvananthapuram–Riyadh",
+    "operator": "Air India Express",
+    "mode": "Flight",
+    "countries": [
+      "India",
+      "Saudi Arabia"
+    ],
+    "corridor": "India–West Asia",
+    "status": "Announced",
+    "scale": "3× weekly",
+    "why": "Adds another direct South India–Saudi link and strengthens Kerala–GCC connectivity.",
+    "source": "Scheduled from 27 Oct 2026; Tue/Thu/Sat"
+  },
+  {
+    "date": "2026-10-29",
+    "name": "Thiruvananthapuram–Bahrain",
+    "operator": "Air India Express",
+    "mode": "Flight",
+    "countries": [
+      "India",
+      "Bahrain"
+    ],
+    "corridor": "India–West Asia",
+    "status": "Announced",
+    "scale": "2× weekly",
+    "why": "Adds direct capacity from Kerala to Bahrain for VFR, labour and business traffic.",
+    "source": "Scheduled late Oct 2026; Thu/Sat"
+  },
+  {
+    "date": "2026-11-11",
+    "name": "Istanbul–Chengdu Tianfu",
+    "operator": "Turkish Airlines",
+    "mode": "Flight",
+    "countries": [
+      "Türkiye",
+      "China"
+    ],
+    "corridor": "West Asia–China",
+    "status": "Announced",
+    "scale": "3× weekly · B787-9; inaugural flight scheduled B777-300ER",
+    "why": "Adds Turkish Airlines’ first western-interior China gateway and strengthens China–West Asia/Europe transfer options.",
+    "source": "Starts 11 Nov 2026; 3× weekly"
   }
 ]
