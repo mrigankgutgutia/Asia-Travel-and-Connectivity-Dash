@@ -1,4 +1,4 @@
-<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Asia Master Dashboard</title><body style="margin:0;background:#07111f;color:#eaf2fb;font-family:system-ui"><div id="loading" style="padding:24px">Loading dashboard…</div><script>
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Asia Master Dashboard</title><body style="margin:0;background:#07111f;color:#eaf2fb;font-family:system-ui"><div id="loading" style="padding:20px;font-size:13px">Loading dashboard…</div><script>
 (async()=>{try{
  const r=await fetch('https://raw.githubusercontent.com/mrigankgutgutia/Asia-Travel-and-Connectivity-Dash/82cf5090ca59aa73631f9bc0ffd0d39c2b058255/index.html',{cache:'no-store'});
  const wrapper=await r.text();
@@ -8,82 +8,53 @@
  const ds=new DecompressionStream('gzip');
  let html=await new Response(new Blob([bin]).stream().pipeThrough(ds)).text();
  const patch=`(function(){
+  const compactCss='body{font-size:13px!important} h1{font-size:24px!important} h2{font-size:18px!important} h3{font-size:15px!important} .card b{font-size:22px!important} .card span,.note,.muted,th,td,input,select,button{font-size:12px!important} th,td{padding:8px 9px!important} input,select,button{padding:7px 9px!important}';
+  function addCss(d){if(!d||d.getElementById('compact-font-patch'))return;const s=d.createElement('style');s.id='compact-font-patch';s.textContent=compactCss;d.head.appendChild(s);}
+  addCss(document);
   function patchConnectivity(){
    const f=document.querySelector('iframe[title="Asia Connectivity Tracker"]');
    if(!f||!f.contentDocument||!f.contentDocument.body){setTimeout(patchConnectivity,120);return;}
-   const d=f.contentDocument; if(d.documentElement.dataset.livePatched==='1') return; d.documentElement.dataset.livePatched='1';
+   const d=f.contentDocument; addCss(d); if(d.documentElement.dataset.livePatched==='2') return; d.documentElement.dataset.livePatched='2';
    const s=d.createElement('script');
    s.textContent=\`
-    try{
-      data.forEach(x=>{
-        if(x.date==='2026-09-28'&&['Xiong’an–Shangqiu HSR','Xi’an–Ankang HSR','Yichang–Xingshan HSR','Harbin–Yichun HSR','Tashkent–Hyderabad'].includes(x.name)){
-          x.status='Announced';
-          if(x.name==='Tashkent–Hyderabad') x.source='Scheduled to start 28 Sep 2026 · 2× weekly';
-          else x.source='Confirmed to open 28 Sep 2026';
-        }
-      });
+    (async()=>{try{
+      const res=await fetch('https://raw.githubusercontent.com/mrigankgutgutia/Asia-Travel-and-Connectivity-Dash/main/connectivity_updates.json?ts='+Date.now(),{cache:'no-store'});
+      const latest=await res.json();
+      if(Array.isArray(latest)){data.splice(0,data.length,...latest);}
       ['q','corr','country','mode','status'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
       function parseDate(v){return /^\\d{4}-\\d{2}-\\d{2}$/.test(v)?new Date(v+'T00:00:00Z'):null;}
-      recent=function(x){
-        if(x.status!=='Operational') return false;
-        const d=parseDate(x.date); if(!d) return false;
-        const n=new Date(), t=new Date(Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate()));
-        const c=new Date(t); c.setUTCMonth(c.getUTCMonth()-6);
-        return d>=c&&d<=t;
-      };
+      recent=function(x){if(x.status!=='Operational')return false;const dd=parseDate(x.date);if(!dd)return false;const n=new Date(),t=new Date(Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate())),c=new Date(t);c.setUTCMonth(c.getUTCMonth()-6);return dd>=c&&dd<=t;};
       render=function(){
         const q=document.getElementById('q').value.trim().toLowerCase();
         const base=data.filter(x=>(!q||JSON.stringify(x).toLowerCase().includes(q))&&(!document.getElementById('corr').value||x.corridor===document.getElementById('corr').value)&&(!document.getElementById('country').value||x.countries.includes(document.getElementById('country').value))&&(!document.getElementById('mode').value||x.mode===document.getElementById('mode').value)&&(!document.getElementById('status').value||x.status===document.getElementById('status').value));
-        const f=base.filter(x=>scope==='all'||(scope==='recent'&&recent(x))||(scope==='up'&&x.status!=='Operational')).slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-        document.getElementById('rows').innerHTML=f.length?f.map(x=>\`<tr><td>\${x.date}</td><td><b>\${x.name}</b><br><span class="note">\${x.operator}</span></td><td>\${x.mode}</td><td>\${x.countries.join(' · ')}</td><td>\${x.corridor}</td><td><span class="pill \${x.status==='Operational'?'':'plan'}">\${x.status}</span></td><td>\${x.scale}</td><td>\${x.why}</td><td>\${x.source}</td></tr>\`).join(''):'<tr><td colspan="9" class="note">No developments match the current filters.</td></tr>';
-        const rec=base.filter(recent).length, up=base.filter(x=>x.status!=='Operational').length, countries=new Set(base.flatMap(x=>x.countries)).size;
-        document.getElementById('stats').innerHTML=\`<div class="card"><b>\${f.length}</b><span>\${scope==='all'?'Tracked developments':scope==='recent'?'Recently opened shown':'Upcoming shown'}</span></div><div class="card"><b>\${rec}</b><span>Opened in last 6 months</span></div><div class="card"><b>\${up}</b><span>Upcoming / announced</span></div><div class="card"><b>\${countries}</b><span>Countries covered</span></div>\`;
+        const ff=base.filter(x=>scope==='all'||(scope==='recent'&&recent(x))||(scope==='up'&&x.status!=='Operational')).slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+        document.getElementById('rows').innerHTML=ff.length?ff.map(x=>\`<tr><td>\${x.date}</td><td><b>\${x.name}</b><br><span class="note">\${x.operator}</span></td><td>\${x.mode}</td><td>\${x.countries.join(' · ')}</td><td>\${x.corridor}</td><td><span class="pill \${x.status==='Operational'?'':'plan'}">\${x.status}</span></td><td>\${x.scale}</td><td>\${x.why}</td><td>\${x.source}</td></tr>\`).join(''):'<tr><td colspan="9" class="note">No developments match the current filters.</td></tr>';
+        const rec=base.filter(recent).length,up=base.filter(x=>x.status!=='Operational').length,countries=new Set(base.flatMap(x=>x.countries)).size;
+        document.getElementById('stats').innerHTML=\`<div class="card"><b>\${ff.length}</b><span>\${scope==='all'?'Tracked developments':scope==='recent'?'Recently opened shown':'Upcoming shown'}</span></div><div class="card"><b>\${rec}</b><span>Opened in last 6 months</span></div><div class="card"><b>\${up}</b><span>Upcoming / announced</span></div><div class="card"><b>\${countries}</b><span>Countries covered</span></div>\`;
       };
-      document.querySelectorAll('input,select').forEach(e=>{e.setAttribute('autocomplete','off');e.addEventListener('input',()=>render());e.addEventListener('change',()=>render());});
-      const note=[...document.querySelectorAll('.note')].find(e=>e.textContent.includes('Recently opened'));
-      if(note) note.textContent='“Recently opened” = operational launch/opening within the trailing six months from today. Future-dated entries remain Upcoming until they actually launch.';
+      document.querySelectorAll('input,select').forEach(e=>{e.setAttribute('autocomplete','off');});
+      const note=[...document.querySelectorAll('.note')].find(e=>e.textContent.includes('Recently opened'));if(note)note.textContent='“Recently opened” = operational launch/opening within the trailing six months from today. Future-dated entries remain Upcoming until they actually launch.';
       render();
-    }catch(e){console.error(e);}
+    }catch(e){console.error('Connectivity live sync failed',e);}})();
    \`;
    d.body.appendChild(s);
   }
   function patchTravel(){
    const f=document.querySelector('iframe[title="Travel Footprint Dashboard"]');
    if(!f||!f.contentDocument||!f.contentDocument.body){setTimeout(patchTravel,120);return;}
-   const d=f.contentDocument; if(d.documentElement.dataset.travelPatched==='1') return; d.documentElement.dataset.travelPatched='1';
+   const d=f.contentDocument; addCss(d); if(d.documentElement.dataset.travelPatched==='2') return; d.documentElement.dataset.travelPatched='2';
    const s=d.createElement('script');
    s.textContent=\`
     try{
-      const qEl=document.getElementById('q'), regionEl=document.getElementById('region'), countryEl=document.getElementById('country');
-      function refreshCountries(){
-        const region=regionEl.value;
-        const valid=[...new Set(data.filter(x=>!region||x.r===region).map(x=>x.c))].sort();
-        const prior=countryEl.value;
-        countryEl.innerHTML='<option value="">All countries</option>'+valid.map(v=>'<option value="'+v+'">'+v+'</option>').join('');
-        countryEl.value=valid.includes(prior)?prior:'';
-      }
-      render=function(){
-        layer.clearLayers();
-        const q=qEl.value.trim().toLowerCase();
-        const fdata=data.filter(x=>(!q||JSON.stringify(x).toLowerCase().includes(q))&&(!regionEl.value||x.r===regionEl.value)&&(!countryEl.value||x.c===countryEl.value));
-        fdata.forEach(x=>{const radius=5+Math.min(10,x.v*1.2);L.circleMarker([x.lat,x.lon],{radius,weight:1.5,fillOpacity:.75}).bindTooltip(\`\${x.p} · \${x.y} · ~\${x.v}×\`,{direction:'top'}).bindPopup(popup(x)).addTo(layer);});
-        if(fdata.length){const bounds=L.latLngBounds(fdata.map(x=>[x.lat,x.lon]));map.fitBounds(bounds.pad(.18),{maxZoom:5});}else{map.fitBounds([[0,-12],[72,150]]);}
-        const countries=new Set(fdata.map(x=>x.c));
-        const visits=fdata.reduce((s,x)=>s+x.v,0);
-        const asia=fdata.filter(x=>x.r!=='Europe').length, eur=fdata.filter(x=>x.r==='Europe').length;
-        document.getElementById('stats').innerHTML=\`<div class="card"><b>\${countries.size}</b><span>Countries / territories</span></div><div class="card"><b>\${fdata.length}</b><span>Mapped places / clusters</span></div><div class="card"><b>\${visits}</b><span>Approx. visit instances</span></div><div class="card"><b>\${asia}</b><span>Asian place records</span></div><div class="card"><b>\${eur}</b><span>European place records</span></div>\`;
-        const repeat=[...fdata].sort((a,b)=>b.v-a.v).slice(0,10), mx=repeat.length?repeat[0].v:1;
-        document.getElementById('bars').innerHTML=repeat.length?repeat.map(x=>\`<div><b>\${x.p} <span class="muted">~\${x.v}×</span></b><div class="bar"><i style="width:\${x.v/mx*100}%"></i></div></div>\`).join(''):'<span class="muted">No places match the current filters.</span>';
-      };
-      regionEl.addEventListener('change',()=>{refreshCountries();render();});
-      countryEl.addEventListener('change',render);
-      qEl.addEventListener('input',render);
-      refreshCountries(); render();
+      const qEl=document.getElementById('q'),regionEl=document.getElementById('region'),countryEl=document.getElementById('country');
+      function refreshCountries(){const region=regionEl.value;const valid=[...new Set(data.filter(x=>!region||x.r===region).map(x=>x.c))].sort();const prior=countryEl.value;countryEl.innerHTML='<option value="">All countries</option>'+valid.map(v=>'<option value="'+v+'">'+v+'</option>').join('');countryEl.value=valid.includes(prior)?prior:'';}
+      render=function(){layer.clearLayers();const q=qEl.value.trim().toLowerCase();const fdata=data.filter(x=>(!q||JSON.stringify(x).toLowerCase().includes(q))&&(!regionEl.value||x.r===regionEl.value)&&(!countryEl.value||x.c===countryEl.value));fdata.forEach(x=>{const radius=5+Math.min(10,x.v*1.2);L.circleMarker([x.lat,x.lon],{radius,weight:1.5,fillOpacity:.75}).bindTooltip(\`\${x.p} · \${x.y} · ~\${x.v}×\`,{direction:'top'}).bindPopup(popup(x)).addTo(layer);});if(fdata.length){const bounds=L.latLngBounds(fdata.map(x=>[x.lat,x.lon]));map.fitBounds(bounds.pad(.18),{maxZoom:5});}else map.fitBounds([[0,-12],[72,150]]);const countries=new Set(fdata.map(x=>x.c)),visits=fdata.reduce((sum,x)=>sum+x.v,0),asia=fdata.filter(x=>x.r!=='Europe').length,eur=fdata.filter(x=>x.r==='Europe').length;document.getElementById('stats').innerHTML=\`<div class="card"><b>\${countries.size}</b><span>Countries / territories</span></div><div class="card"><b>\${fdata.length}</b><span>Mapped places / clusters</span></div><div class="card"><b>\${visits}</b><span>Approx. visit instances</span></div><div class="card"><b>\${asia}</b><span>Asian place records</span></div><div class="card"><b>\${eur}</b><span>European place records</span></div>\`;const repeat=[...fdata].sort((a,b)=>b.v-a.v).slice(0,10),mx=repeat.length?repeat[0].v:1;document.getElementById('bars').innerHTML=repeat.length?repeat.map(x=>\`<div><b>\${x.p} <span class="muted">~\${x.v}×</span></b><div class="bar"><i style="width:\${x.v/mx*100}%"></i></div></div>\`).join(''):'<span class="muted">No places match the current filters.</span>';};
+      regionEl.addEventListener('change',()=>{refreshCountries();render();});countryEl.addEventListener('change',render);qEl.addEventListener('input',render);refreshCountries();render();
     }catch(e){console.error(e);}
-   \`;
-   d.body.appendChild(s);
+   \`;d.body.appendChild(s);
   }
-  setTimeout(patchConnectivity,80); setTimeout(patchTravel,100);
+  function patchAllFrames(){document.querySelectorAll('iframe').forEach(f=>{try{if(f.contentDocument)addCss(f.contentDocument)}catch(e){}});}
+  setTimeout(patchConnectivity,80);setTimeout(patchTravel,100);setTimeout(patchAllFrames,300);setTimeout(patchAllFrames,1000);
  })();`;
  html=html.replace('</body>','<script>'+patch+'<\\/script></body>');
  document.open();document.write(html);document.close();
