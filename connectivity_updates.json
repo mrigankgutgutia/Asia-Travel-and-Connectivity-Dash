@@ -105,6 +105,20 @@
   },
   {
     "date": "2026-09-04",
+    "name": "Changsha Metro Line 2 Phase 2",
+    "operator": "Changsha Metro",
+    "mode": "Metro / suburban rail",
+    "countries": [
+      "China"
+    ],
+    "corridor": "China domestic",
+    "status": "Operational",
+    "scale": "11.06 km · 10 stations",
+    "why": "Extends Line 2 northwest and expands Changsha’s rapid-transit reach toward the future HSR interchange.",
+    "source": "Opened 4 Sep 2026"
+  },
+  {
+    "date": "2026-09-04",
     "name": "Mumbai–Hanoi",
     "operator": "Akasa Air",
     "mode": "Flight",
@@ -117,20 +131,6 @@
     "scale": "4× weekly · B737-8",
     "why": "Akasa’s Vietnam entry adds a fourth nonstop operator pattern on Mumbai–Hanoi ahead of IndiGo’s planned daily service.",
     "source": "Akasa/AeroRoutes: launched 4 Sep 2026"
-  },
-  {
-    "date": "2026-09-04",
-    "name": "Changsha Metro Line 2 Phase 2",
-    "operator": "Changsha Metro",
-    "mode": "Metro / suburban rail",
-    "countries": [
-      "China"
-    ],
-    "corridor": "China domestic",
-    "status": "Operational",
-    "scale": "11.06 km · 10 stations",
-    "why": "Extends Line 2 northwest and expands Changsha’s rapid-transit reach toward the future HSR interchange.",
-    "source": "Opened 4 Sep 2026"
   },
   {
     "date": "2026-09-06",
@@ -162,6 +162,20 @@
     "source": "Riyadh Air: launched 9 Sep 2026; daily"
   },
   {
+    "date": "2026-09-15",
+    "name": "Thailand tourist visa-exemption overhaul",
+    "operator": "Thailand Ministry of Interior / Immigration",
+    "mode": "Visa / entry policy",
+    "countries": [
+      "Thailand"
+    ],
+    "corridor": "SEA entry policy",
+    "status": "Operational",
+    "scale": "30-day visa exemption for 60 countries/territories; 15-day exemption for 2; VoA reduced to 3",
+    "why": "Materially changes short-stay access to Thailand across India, Japan, Southeast Asia, Central Asia and West Asia source markets.",
+    "source": "Thailand PRD / TAT: effective 15 Sep 2026"
+  },
+  {
     "date": "2026-09-16",
     "name": "Jakarta LRT Kelapa Gading–Manggarai",
     "operator": "LRT Jakarta / Jakpro",
@@ -191,6 +205,21 @@
   },
   {
     "date": "2026-09-28",
+    "name": "Boten–Vientiane C95/C96 morning service",
+    "operator": "Laos-China Railway Co.",
+    "mode": "HSR / intercity rail",
+    "countries": [
+      "Laos",
+      "China"
+    ],
+    "corridor": "China–SEA",
+    "status": "Operational",
+    "scale": "C95 Boten 08:00 → Vientiane 11:47; C96 Vientiane 14:05 → Boten 18:32; 6 stops",
+    "why": "Adds same-day north–south travel options along the China–Laos rail corridor via Luang Prabang and Vang Vieng.",
+    "source": "KPL / Laos-China Railway: launched 28 Sep 2026"
+  },
+  {
+    "date": "2026-09-28",
     "name": "Kathmandu–Shanghai",
     "operator": "Himalaya Airlines",
     "mode": "Flight",
@@ -203,6 +232,51 @@
     "scale": "Direct scheduled service · frequency not stated in launch release",
     "why": "Reopens a direct Nepal–Shanghai corridor; Himalaya says it will be the only scheduled nonstop carrier on the route.",
     "source": "Himalaya Airlines: service resumes 28 Sep 2026"
+  },
+  {
+    "date": "2026-10-01",
+    "name": "Delhi–Hong Kong",
+    "operator": "IndiGo",
+    "mode": "Flight",
+    "countries": [
+      "India",
+      "Hong Kong"
+    ],
+    "corridor": "India–China",
+    "status": "Operational",
+    "scale": "Daily · A321XLR through 24 Oct; A321neo from 25 Oct",
+    "why": "Restores a major India–Hong Kong nonstop corridor after the Jul–Sep temporary suspension.",
+    "source": "AeroRoutes / IndiGo: service resumed 1 Oct 2026"
+  },
+  {
+    "date": "2026-10-01",
+    "name": "Kolkata–Shanghai Pudong",
+    "operator": "IndiGo",
+    "mode": "Flight",
+    "countries": [
+      "India",
+      "China"
+    ],
+    "corridor": "India–China",
+    "status": "Operational",
+    "scale": "Daily service restored after Jul–Sep suspension",
+    "why": "Re-establishes a key eastern-India link to mainland China and improves Kolkata's role as an India–East Asia gateway.",
+    "source": "IndiGo: temporary suspension ended 30 Sep; bookings/service resumed from 1 Oct 2026"
+  },
+  {
+    "date": "2026-10-03",
+    "name": "Bali (Denpasar)–Phuket",
+    "operator": "TransNusa",
+    "mode": "Flight",
+    "countries": [
+      "Indonesia",
+      "Thailand"
+    ],
+    "corridor": "SEA–SEA",
+    "status": "Operational",
+    "scale": "Daily · A320 (174 seats); increased from 4× weekly",
+    "why": "The move to daily service materially improves direct connectivity between two major Southeast Asian leisure hubs without a Jakarta/Kuala Lumpur/Singapore connection.",
+    "source": "Route launched 9 Sep 2026; increased 4× weekly → daily from 3 Oct 2026"
   },
   {
     "date": "2026-10-03",
@@ -220,19 +294,47 @@
     "source": "Launched 3 Oct 2026; 5× weekly"
   },
   {
-    "date": "2026-10-03",
-    "name": "Bali (Denpasar)–Phuket",
-    "operator": "TransNusa",
+    "date": "2026-10-06",
+    "name": "Air India Express Winter 2026 network expansion",
+    "operator": "Air India Express",
     "mode": "Flight",
     "countries": [
-      "Indonesia",
-      "Thailand"
+      "India"
+    ],
+    "corridor": "India–West Asia / SEA",
+    "status": "Announced",
+    "scale": "40+ new routes phased from 25 Oct; major additional West Asia and Southeast Asia capacity",
+    "why": "Represents a broad step-up in Indian short-haul international capacity, especially on Gulf and Southeast Asian corridors.",
+    "source": "Air India Express winter schedule coverage: announced 6 Oct 2026"
+  },
+  {
+    "date": "2026-10-06",
+    "name": "Kuching–Jakarta",
+    "operator": "AirBorneo",
+    "mode": "Flight",
+    "countries": [
+      "Malaysia",
+      "Indonesia"
     ],
     "corridor": "SEA–SEA",
-    "status": "Operational",
-    "scale": "Daily · A320 (174 seats); increased from 4× weekly",
-    "why": "The move to daily service materially improves direct connectivity between two major Southeast Asian leisure hubs without a Jakarta/Kuala Lumpur/Singapore connection.",
-    "source": "Route launched 9 Sep 2026; increased 4× weekly → daily from 3 Oct 2026"
+    "status": "Announced",
+    "scale": "Direct service targeted for end-Oct 2026 · ~1h30 block time; frequency not yet stated",
+    "why": "Adds a direct Sarawak–Jakarta link and supports Kuching's push to become a stronger ASEAN regional gateway.",
+    "source": "Sarawak Premier / DayakDaily: end-Oct launch reconfirmed 6 Oct 2026"
+  },
+  {
+    "date": "2026-10-06",
+    "name": "Mumbai international slot-shift plan",
+    "operator": "MoCA / MIAL / Navi Mumbai International Airport",
+    "mode": "Flight",
+    "countries": [
+      "India"
+    ],
+    "corridor": "India international network",
+    "status": "Deferred / under consultation",
+    "scale": "Proposed shift affected 265 of 770 weekly international departures; 25 Oct implementation deferred",
+    "why": "Avoids an immediate one-third reduction in Mumbai international departure slots while airlines and airport operators negotiate a transition plan.",
+    "source": "MoCA / Business Standard / Indian Express: deferment announced 6 Oct 2026"
   },
   {
     "date": "2026-10-27",
@@ -278,5 +380,35 @@
     "scale": "3× weekly · B787-9; inaugural flight scheduled B777-300ER",
     "why": "Adds Turkish Airlines’ first western-interior China gateway and strengthens China–West Asia/Europe transfer options.",
     "source": "Starts 11 Nov 2026; 3× weekly"
+  },
+  {
+    "date": "2026-11-30",
+    "name": "Almaty–Tokyo Narita",
+    "operator": "Air Astana",
+    "mode": "Flight",
+    "countries": [
+      "Kazakhstan",
+      "Japan"
+    ],
+    "corridor": "Central Asia–Japan",
+    "status": "Announced",
+    "scale": "2× weekly · A321LR · JAL codeshare",
+    "why": "Creates a rare nonstop Japan–Central Asia link and strengthens Almaty's role as a regional transit hub.",
+    "source": "Air Astana / AeroRoutes: starts 30 Nov 2026; Mon/Thu outbound"
+  },
+  {
+    "date": "2026-12-01",
+    "name": "Taipei–Delhi",
+    "operator": "EVA Air",
+    "mode": "Flight",
+    "countries": [
+      "Taiwan",
+      "India"
+    ],
+    "corridor": "India–Greater China",
+    "status": "Announced",
+    "scale": "5× weekly · A330-300",
+    "why": "Restores EVA Air passenger service to India and adds a Taiwan-based nonstop option linking Delhi with Taipei and onward East Asia/North America connections.",
+    "source": "EVA Air: starts 1 Dec 2026; 5× weekly"
   }
 ]
